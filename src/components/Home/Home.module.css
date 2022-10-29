@@ -1,0 +1,10 @@
+.home_content {
+  display: flex !important;
+  justify-content: center !important;
+}
+.pagination {
+  background: #001529 !important;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}

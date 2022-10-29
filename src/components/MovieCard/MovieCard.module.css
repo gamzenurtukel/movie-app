@@ -1,0 +1,19 @@
+.card {
+  background-color: #192939 !important;
+  border: 2px solid #192939 !important;
+  width: 190px;
+  color: #ffff !important;
+  margin-bottom: 20px !important;
+  margin: 10px !important;
+}
+.title {
+  font-weight: 600;
+  font-size: large;
+}
+.btn {
+  padding: 0;
+}
+.card_content {
+  display: grid;
+  justify-items: start;
+}

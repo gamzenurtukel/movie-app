@@ -1,0 +1,25 @@
+.container {
+  background-color: #001529;
+  min-height: 619px;
+  padding: 10px;
+  color: #ffff;
+  display: flex;
+}
+.col1 {
+  padding-left: 30px;
+}
+
+.col2 {
+  padding-left: 30px;
+  color: #ffff;
+  border-left: 1px solid #465360;
+}
+.div {
+  display: grid;
+  justify-content: center;
+  justify-items: start;
+}
+.span {
+  font-weight: 900;
+  font-size: large;
+}

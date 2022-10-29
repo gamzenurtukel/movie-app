@@ -1,0 +1,14 @@
+.link {
+  color: #fff;
+}
+.search {
+  display: flex;
+  padding-top: 12px;
+}
+
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
+  background-color: transparent;
+}
+.badge {
+  color: #fff;
+}

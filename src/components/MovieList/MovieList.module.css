@@ -1,0 +1,7 @@
+.container {
+  display: flex !important;
+  justify-content: flex-start !important;
+  flex-flow: row wrap !important;
+  background: #001529 !important;
+  min-height: 620px !important;
+}
