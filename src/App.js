@@ -12,16 +12,21 @@ import { fetchAsyncMovies } from "./Redux/slices/moviesSlice";
 
 function App() {
   const { Header, Footer, Content } = Layout;
-  const [text, setText] = useState("harry");
   const location = useLocation();
   const navigate = useNavigate();
 
-  if (location.pathname === "/" && !location.search) {
-    navigate({
-      pathname: "/",
-      search: "?search=harry&page=1",
-    });
-  }
+  useEffect(() => {
+    if (location.pathname === "/" && !location.search) {
+      navigate({
+        pathname: "/",
+        search: "?search=harry&page=1",
+      });
+    }
+  });
+
+  const [search, setSearch] = useState(
+    () => new URLSearchParams(location.search).get("search") || "harry"
+  );
 
   const [pageCurrent, setPageCurrent] = useState(
     () => new URLSearchParams(location.search).get("page") || 1
@@ -31,17 +36,22 @@ function App() {
   useEffect(() => {
     dispatch(
       fetchAsyncMovies({
-        text: new URLSearchParams(location.search).get("search"),
+        search: new URLSearchParams(location.search).get("search"),
         page: new URLSearchParams(location.search).get("page"),
       })
     );
-  }, [dispatch, text, pageCurrent, location.search]);
+  }, [dispatch, pageCurrent, search, location.search]);
 
   return (
     <div className="App">
       <Layout className="layout">
         <Header>
-          {<MovieHeader setText={setText} setPageCurrent={setPageCurrent} />}
+          {
+            <MovieHeader
+              setSearch={setSearch}
+              setPageCurrent={setPageCurrent}
+            />
+          }
         </Header>
         <Content className="content">
           <Routes>

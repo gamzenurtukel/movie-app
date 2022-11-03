@@ -1,7 +1,7 @@
 .content {
   padding: 24;
   min-height: 1500;
-  background-color: #fff;
+  background-color: #001529 !important;
   margin: 24;
   display: flex !important;
   justify-content: center !important;
@@ -10,7 +10,12 @@
   background-color: #001529;
   color: #fff;
 }
-
+.layout {
+  background-color: #001529 !important;
+}
 .ant-menu-dark.ant-menu-horizontal > .menu-item-search:hover {
+  background-color: transparent !important;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
   background-color: transparent !important;
 }
